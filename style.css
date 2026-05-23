@@ -1,0 +1,156 @@
+/* Reset margin dan padding bawaan browser */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* Background abu-abu gelap merepresentasikan area luar poster */
+    background-color: #2b2b2b; 
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.poster-container {
+    width: 100%;
+    max-width: 650px;
+}
+
+.poster-card {
+    background-color: #ffffff;
+    border-radius: 40px;
+    padding: 60px 50px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* --- HEADER --- */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 40px;
+}
+
+.title h1 {
+    font-size: 5rem;
+    font-weight: 900;
+    line-height: 0.9;
+    color: #222;
+    letter-spacing: -2px;
+}
+
+.sponsor {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.sponsor p {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #222;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.arrow-icon {
+    width: 45px;
+    height: 45px;
+    border: 3px solid #222;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #222;
+}
+
+/* --- EVENT DETAILS --- */
+.event-details {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 900;
+    color: #222;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+/* --- SCHEDULE LIST --- */
+.schedule-list {
+    list-style: none;
+    margin-bottom: 50px;
+}
+
+.schedule-item {
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+}
+
+/* Warna background untuk list */
+.schedule-item.purple {
+    background-color: #B57EDC;
+    color: #ffffff;
+}
+
+.schedule-item.green {
+    background-color: #CFFF04;
+    color: #222;
+}
+
+.time-badge {
+    background-color: #ffffff;
+    color: #222;
+    padding: 12px 20px;
+    border-radius: 15px;
+    font-weight: 800;
+    margin-right: 20px;
+    min-width: 140px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.event-desc {
+    font-weight: 700;
+    font-size: 1.15rem;
+}
+
+/* --- FOOTER --- */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 800;
+    color: #222;
+    font-size: 1.1rem;
+}
+
+/* Responsivitas untuk layar HP */
+@media (max-width: 600px) {
+    .title h1 {
+        font-size: 3.5rem;
+    }
+    .event-details, .footer {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+    .schedule-item {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+    .time-badge {
+        margin-right: 0;
+        margin-bottom: 10px;
+        width: 100%;
+    }
+}
