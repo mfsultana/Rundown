@@ -1,156 +1,104 @@
-/* Reset margin dan padding bawaan browser */
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    /* Background abu-abu gelap merepresentasikan area luar poster */
-    background-color: #2b2b2b; 
-    font-family: 'Inter', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0f172a, #1e1b4b, #311042);
+    color: #f8fafc;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
     padding: 20px;
 }
 
-.poster-container {
+.container {
     width: 100%;
-    max-width: 650px;
-}
-
-.poster-card {
-    background-color: #ffffff;
-    border-radius: 40px;
-    padding: 60px 50px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-}
-
-/* --- HEADER --- */
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 40px;
-}
-
-.title h1 {
-    font-size: 5rem;
-    font-weight: 900;
-    line-height: 0.9;
-    color: #222;
-    letter-spacing: -2px;
-}
-
-.sponsor {
-    text-align: right;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-}
-
-.sponsor p {
-    font-weight: 700;
-    font-size: 1.1rem;
-    color: #222;
-    margin-bottom: 15px;
-    line-height: 1.2;
-}
-
-.arrow-icon {
-    width: 45px;
-    height: 45px;
-    border: 3px solid #222;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #222;
-}
-
-/* --- EVENT DETAILS --- */
-.event-details {
-    display: flex;
-    justify-content: space-between;
-    font-weight: 900;
-    color: #222;
-    margin-bottom: 30px;
-    font-size: 1.1rem;
-}
-
-/* --- SCHEDULE LIST --- */
-.schedule-list {
-    list-style: none;
-    margin-bottom: 50px;
-}
-
-.schedule-item {
-    display: flex;
-    align-items: center;
+    max-width: 500px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 20px;
-    padding: 12px 15px;
-    margin-bottom: 15px;
+    padding: 30px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
 }
 
-/* Warna background untuk list */
-.schedule-item.purple {
-    background-color: #B57EDC;
-    color: #ffffff;
-}
-
-.schedule-item.green {
-    background-color: #CFFF04;
-    color: #222;
-}
-
-.time-badge {
-    background-color: #ffffff;
-    color: #222;
-    padding: 12px 20px;
-    border-radius: 15px;
-    font-weight: 800;
-    margin-right: 20px;
-    min-width: 140px;
+header {
     text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #f472b6;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    font-size: 0.85rem;
+    color: #94a3b8;
+}
+
+.timeline {
+    position: relative;
+    padding-left: 20px;
+    border-left: 2px dashed rgba(244, 114, 182, 0.4);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 25px;
+    padding-left: 15px;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -26px;
+    top: 4px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #475569;
+    border: 2px solid #1e1b4b;
+}
+
+.timeline-item.active::before {
+    background: #f472b6;
+    box-shadow: 0 0 10px #f472b6;
+}
+
+.time {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #38bdf8;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.content h3 {
     font-size: 1rem;
+    font-weight: 500;
+    color: #ffffff;
+    margin-bottom: 4px;
 }
 
-.event-desc {
-    font-weight: 700;
-    font-size: 1.15rem;
+.content p {
+    font-size: 0.85rem;
+    color: #cbd5e1;
+    line-height: 1.4;
 }
 
-/* --- FOOTER --- */
-.footer {
-    display: flex;
-    justify-content: space-between;
-    font-weight: 800;
-    color: #222;
-    font-size: 1.1rem;
-}
-
-/* Responsivitas untuk layar HP */
-@media (max-width: 600px) {
-    .title h1 {
-        font-size: 3.5rem;
-    }
-    .event-details, .footer {
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
-    }
-    .schedule-item {
-        flex-direction: column;
-        text-align: center;
-        padding: 20px;
-    }
-    .time-badge {
-        margin-right: 0;
-        margin-bottom: 10px;
-        width: 100%;
-    }
+.footer-note {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 0.8rem;
+    color: #94a3b8;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 15px;
 }
